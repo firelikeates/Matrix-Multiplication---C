@@ -14,31 +14,31 @@ setlocale(LC_ALL,"Turkish");
 int a,b,c,d,e,f,g,h,m,n,l,i,j,k,o,p;
 
 
-printf(	"**********MATRİS çARPIM********** ");
+printf(	"**********MATRÃS Ã§ARPIM********** ");
 printf("\n");
-printf("PS: Eğer çarpma işlemi yapıcaksanız birinci matrisin sütün sayısı ile ikinci matrisin satır sayısı aynı olmalı!!\n");
-printf("PS: Eger toplama veya çıkarma işlemi yapıcaksanız matrislerin satır ve sütün saıları aynı olmalı!!");
+printf("PS: EÃ°er Ã§arpma iÃ¾lemi yapÃ½caksanÃ½z birinci matrisin sÃ¼tÃ¼n sayÃ½sÃ½ ile ikinci matrisin satÃ½r sayÃ½sÃ½ aynÃ½ olmalÃ½!!\n");
+printf("PS: Eger toplama veya Ã§Ã½karma iÃ¾lemi yapÃ½caksanÃ½z matrislerin satÃ½r ve sÃ¼tÃ¼n saÃ½larÃ½ aynÃ½ olmalÃ½!!");
 printf("\n");
 
-printf("Yapmak istediğiniz işlemi seçin:(1:Toplama , 2:Çıkarma , 3: Çarpma) ");
+printf("Yapmak istediÃ°iniz iÃ¾lemi seÃ§in:(1:Toplama , 2:Ã‡Ã½karma , 3: Ã‡arpma) ");
 scanf("%d",&e);
 printf("\n");
 
 
-printf("Birinci matrisin satır sayısını girin: ");
+printf("Birinci matrisin satÃ½r sayÃ½sÃ½nÃ½ girin: ");
 scanf("%d",&a);
 printf ("\n");
 
-printf("Birinci matrisin sütun sayısını girin: ");
+printf("Birinci matrisin sÃ¼tun sayÃ½sÃ½nÃ½ girin: ");
 scanf("%d",&b);
 printf("\n");
 
 
-printf("İkinci matrisin satur sayısını giriniz: ");
+printf("Ãkinci matrisin satur sayÃ½sÃ½nÃ½ giriniz: ");
 scanf("%d",&g);
 printf("\n");
 
-printf("İkinci matrisin sütun sayıosını giriniz: ");
+printf("Ãkinci matrisin sÃ¼tun sayÃ½osÃ½nÃ½ giriniz: ");
 scanf("%d",&h);
 printf("\n");
 
@@ -46,7 +46,7 @@ int matris1[a][b];
 
 for(i=0;i<a;i++){
 	for(j=0;j<b;j++){
-		printf("1. Matrisin %d-%d elemanını girin: ",i,j);
+		printf("1. Matrisin %d-%d elemanÃ½nÃ½ girin: ",i,j);
 		scanf("%d",&f);
 		printf(" \n");
 		matris1[i][j]=f;
@@ -59,7 +59,7 @@ int matris2[g][h];
 
 for(i=0;i<g;i++){
 	for(j=0;j<h;j++){
-		printf("2. Matrisin %d-%d elamını girin: ",i,j);
+		printf("2. Matrisin %d-%d elamÃ½nÃ½ girin: ",i,j);
 		scanf("%d",&f);
 		printf("\n");
 		matris2[i][j]=f;
@@ -67,7 +67,7 @@ for(i=0;i<g;i++){
 }
 
 int result[m][n];
-int toplam;
+int sum;
 switch(e){
 	case 3:
 		for(i=0;i<a;i++){
@@ -79,57 +79,14 @@ switch(e){
 			for(j=0;j<h;j++){
 				toplam=0;
 				for(k=0;k<b;k++){
-					toplam = toplam + (matris1[i][k] * matris2[k][j]);
+					sum = sum + (matris1[i][k] * matris2[k][j]);
 				}
 				
-				printf("%d ",toplam);
+				printf("%d ",sum);
 			}
 			printf("\n");
 		}
 }
-
-
-/*
-switch(a){
-	case 1:
-		for(i=0;i<4;i++){
-	    	for(j=0;j<4;j++){
-				printf("%d ",cevap[i][j]=matris2[i][j] + matris[i][j]);
-			}
-			printf("\n");
-		}
-		break;
-	case 2:
-		for(i=0;i<4;i++){
-			for(j=0;j<4;j++){
-				printf("%d ",cevap[i][j]=matris[i][j]-matris2[i][j]);
-			}
-			printf("\n");
-		}
-		break;
-	case 3:
-		for(i=0;i<4;i++){
-			for(j=0;j<4;j++){
-				result[i][j]=0;
-			}
-		}
-		for(i=0;i<4;i++){
-			for(j=0;j<4;j++){
-				for(k=0;k<4;k++){
-					result[i][j]=matris[i][k]*matris2[k][j] + result[i][j];
-				}
-			printf("%d ",result[i][j]);	
-			}
-			printf("\n");	
-		}
-		break;
-
-		
-		
-	
-}*/
-
-
 
 	return 0;
 }
